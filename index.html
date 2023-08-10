@@ -8,60 +8,74 @@
     <title>JAVASCRIPT</title>
 </head>
 <body>
-
+<div class="box">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at consequatur culpa delectus, dignissimos distinctio ea error est facilis ipsum optio possimus, sapiente vitae! Asperiores id odit quasi voluptatibus voluptatum?
+</div>
+<div><button class="btn" onclick="sayHello()">Нажать</button></div>
 </body>
 </html>
 <script>
+    // let $box = document.querySelector('.box')
+    // console.log($box)
+    //
+    // function sayHello(){
+    //     alert('Hello')
+    // }
 
-    let someString = 'hello'
-    let someNum = 5
-    let someBoolean = true
-    let someNull = null
-    let someNan = NaN
-    let someUndefined = undefined
-
-    let someArray = ['hello', 15, true]
-    let someObj = {
-        someKey: 145,
-        someString: 'Yes',
-        someArray: ['Hello2', 177, true],
+    let $box = document.querySelector('.box')
+    function sayHello(){
+        $box.remove()
     }
-    console.log(someObj);
-
-    function someFunc(){
-        return 'bla-bla-bla'
-    }
-
-    let someFunction = function() {
-        return 'bla-bla-bla'
-    }
-
-    console.log(someFunction());
-
-    if(!someBoolean) {
-        console.log(someString);
-    } else {
-        console.log(someNum);
-    }
-
-    let person = someBoolean ? 'Ivan' : 'Victor'
-    console.log(person);
-
-    let someArr = ['ivan', 'maxim', 'pidr']
-    someArr.forEach(function(item){
-        console.log(item);
-    })
-
+</script>
+<script>
+    // let someString = 'hello'
+    // let someNum = 5
+    // let someBoolean = true
+    // let someNull = null
+    // let someNan = NaN
+    // let someUndefined = undefined
+    //
+    // let someArray = ['hello', 15, true]
+    // let someObj = {
+    //     someKey: 145,
+    //     someString: 'Yes',
+    //     someArray: ['Hello2', 177, true],
+    // }
+    // console.log(someObj);
+    //
+    // function someFunc(){
+    //     return 'bla-bla-bla'
+    // }
+    //
+    // let someFunction = function() {
+    //     return 'bla-bla-bla'
+    // }
+    //
+    // console.log(someFunction());
+    //
+    // if(!someBoolean) {
+    //     console.log(someString);
+    // } else {
+    //     console.log(someNum);
+    // }
+    //
+    // let person = someBoolean ? 'Ivan' : 'Victor'
+    // console.log(person);
+    //
+    // let someArr = ['ivan', 'maxim', 'pidr']
+    // someArr.forEach(function(item){
+    //     console.log(item);
+    // })
+    //
     // for (let someObjKey in someObj) {
     //     console.log(someObj[someObjKey]);
     // }
-
- // Object.entries(someObj).forEach(function (item){
- //     console.log(item);
- // })
-
-   // let someStringTwo = new String('Strintwo')
-   //  console.log(someStringTwo);
-
+    //
+    // Object.entries(someObj).forEach(function (item){
+    //     console.log(item);
+    // })
+    //
+    // let someStringTwo = new String('Strintwo')
+    // console.log(someStringTwo);
 
 </script>
