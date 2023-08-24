@@ -5,39 +5,7 @@ export default {
 
     data: function () {
         return {
-            persons: [
-                {
-                    id:1,
-                    name: 'Вася',
-                    age: 20,
-                    job: 'coach'
-                },
-                {
-                    id:2,
-                    name: 'Юлия',
-                    age: 29,
-                    job: 'teacher'
-                },
-                {
-                    id:3,
-                    name: 'Сергей',
-                    age: 26,
-                    job: 'doc'
-                },
-                {
-                    id:4,
-                    name: 'Александр',
-                    age: 39,
-                    job: 'seller'
-                },
-                {
-                    id:5,
-                    name: 'Катя',
-                    age: 23,
-                    job: 'traveler'
-                }
-            ]
-
+            persons: null
         }
     },
 
@@ -45,21 +13,21 @@ export default {
         SinglePostComponent
     },
 
+    mounted() {
+        this.getPersons();
+    },
+
     methods: {
-        sayHello() {
-            console.log('Hello')
-        },
-        sayHi() {
-            console.log('Hi')
-        }
+     getPersons(){
+         axios.get('/persons')
+             .then( res => {
+                 this.persons = res.data;
+             })
+     }
     },
 
     computed: {
-        personAgeMoreTwentyFive() {
-            return this.persons.filter(function (person){
-                return person.age > 25
-            })
-        }
+
     }
 }
 </script>
@@ -76,8 +44,8 @@ export default {
         </tr>
         </thead>
         <tbody>
-        <template v-for="person in personAgeMoreTwentyFive">
-        <tr v-if="person.age > 25">
+        <template v-for="person in persons">
+        <tr>
             <th scope="row">{{ person.id }}</th>
             <td>{{ person.name }}</td>
             <td>{{ person.age }}</td>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PersonController as PostControllerAlias;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/persons', \App\Http\Controllers\PersonController::class);
+
+
