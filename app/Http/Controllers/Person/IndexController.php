@@ -27,4 +27,10 @@ class IndexController extends Controller
         $person->update($data);
         return $person;
     }
+
+    public function delete(Person $person){
+
+        $person->delete();
+        return response([]);
+    }
 }

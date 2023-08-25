@@ -15,4 +15,5 @@ Route::group(['prefix' => 'people'], function () {
     Route::post('/', [IndexController::class, 'store']);
     Route::get('/', [IndexController::class, 'index']);
     Route::patch('/{person}', [IndexController::class, 'update']);
+    Route::delete('/{person}', [IndexController::class, 'delete']);
 });
