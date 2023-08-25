@@ -9,9 +9,7 @@ export default {
 
     },
 
-    props: [
-        'obj'
-    ],
+
 
     mounted() {
 this.$parent.$parent.parentLog();
@@ -28,9 +26,7 @@ this.$parent.$parent.parentLog();
 </script>
 
 <template>
-<div>Color: {{ obj.color }}</div>
-<div>Number:{{ obj.number > 5 ? 'more' : 'less' }}</div>
-<div>Is Published: {{ obj.isPublished ? 'published' : 'not published'}}</div>
+
 </template>
 
 <style scoped>

@@ -8,11 +8,6 @@ export default {
             name: null,
             age: null,
             job: null,
-            obj: {
-                color: 'black',
-                number: 20,
-                isPublished: true
-            }
         }
     },
 
@@ -31,7 +26,7 @@ export default {
                     this.name = null,
                         this.age = null,
                         this.job = null,
-                        console.log(res);
+                        this.$parent.$refs.index.getPeople()
                 })
         }
     },
@@ -55,7 +50,7 @@ export default {
             <input @click.prevent="addPerson" class="btn btn-primary" value="Добавить">
         </div>
     </div>
-    <some-component :obj="obj"></some-component>
+    <some-component></some-component>
 </template>
 
 <style scoped>
