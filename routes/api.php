@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Person\IndexController;
-use App\Http\Controllers\Person\StoreController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\PersonController as PersonControllerA;
 use Illuminate\Http\Request;
@@ -13,6 +12,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'people'], function () {
-    Route::post('/', [StoreController::class, '__invoke']);
-    Route::get('/', [IndexController::class, '__invoke']);
+    Route::post('/', [IndexController::class, 'store']);
+    Route::get('/', [IndexController::class, 'index']);
+    Route::patch('/{person}', [IndexController::class, 'update']);
 });
