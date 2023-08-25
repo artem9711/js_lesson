@@ -51,8 +51,14 @@ export default {
 
         isEdit(id){
             return this.editPersonId === id;
-        }
+        },
+
+        indexLog(){
+            console.log('This is index log');
+        },
     },
+
+
 
     computed: {}
 }
