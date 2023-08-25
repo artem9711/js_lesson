@@ -8,6 +8,11 @@ export default {
             name: null,
             age: null,
             job: null,
+            obj: {
+                color: 'black',
+                number: 20,
+                isPublished: true
+            }
         }
     },
 
@@ -50,7 +55,7 @@ export default {
             <input @click.prevent="addPerson" class="btn btn-primary" value="Добавить">
         </div>
     </div>
-    <some-component></some-component>
+    <some-component :obj="obj"></some-component>
 </template>
 
 <style scoped>
